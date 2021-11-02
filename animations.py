@@ -3,10 +3,11 @@ import asyncio
 from telethon.tl.functions.users import GetFullUserRequest
 
 from userbot import *
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ν2.ο"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LegendBoy"
+
 @bot.on(admin_cmd(pattern="think$"))
 @bot.on(sudo_cmd(pattern="think$", allow_sudo=True))
 async def _(event):
@@ -966,11 +967,11 @@ CmdHelp("animation").add_command(
 ).add_command(
   'oss', None, 'Use And See'
 ).add_type(
-  "Official"
+  "Addons"
 ).add_info(
-       "Its Very Useful Module too much just use these u must(might) have fun"
+  "Its Very Useful Module too much just use these u must(might) have fun"
 ).add_warning(
-       "Harmless Module✅"
+  "Harmless Module✅"
 ).add_type(
-       "Addons"
+  "Addons"
 ).add()
