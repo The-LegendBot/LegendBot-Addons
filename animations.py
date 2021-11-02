@@ -175,8 +175,8 @@ async def _(event):
         await event.edit(animation_chars[i % 28])
 
 
-@bot.on(admin_cmd(pattern="viruses$"))
-@bot.on(sudo_cmd(pattern="viruses$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="virus$"))
+@bot.on(sudo_cmd(pattern="virus$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -220,8 +220,8 @@ async def _(event):
         await event.edit(animation_chars[i % 30])
 
 
-@bot.on(admin_cmd(pattern=f"raping$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"raping$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"raped$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"raped$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -909,9 +909,9 @@ CmdHelp("animation").add_command(
 ).add_command(
   'mcs', None, 'Use and see'
 ).add_command(
-  'viruses', None, 'Use and see'
+  'virus', None, 'Use and see'
 ).add_command(
-  'raping', None, 'Use and see'
+  'raped', None, 'Use and see'
 ).add_command(
   'nikl', None, 'Use and see'
 ).add_command(
