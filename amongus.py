@@ -1,5 +1,3 @@
-#@ℓєgєи∂_мя_нαϲκєя
-
 
 import asyncio
 from userbot.cmdhelp import CmdHelp
@@ -7,7 +5,7 @@ from userbot.cmdhelp import CmdHelp
 from userbot import *
 from LEGENDBOT.utils import *
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LegendBoy"
 
 
 @bot.on(admin_cmd(pattern="imp(|n) (.*)", outgoing=True))
