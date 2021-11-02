@@ -42,11 +42,11 @@ async def _(event):
         deq.rotate(1)
       
 CmdHelp("angry").add_command(
-  "^🤬", None, "υѕє it also it describes all about ur felling that u r angry - 🤬"
+  "🤬", None, "υѕє it also it describes all about ur felling that u r angry - 🤬"
 ).add_command(
-  "^🤣", None, "funny command use it and see it"
+  "🤣", None, "funny command use it and see it"
 ).add_command(
-  "^✅", "<Reply To User>", "Use this to make person Confused"
+  "✅", "<Reply To User> without .", "Use this to make person Confused"
 ).add_type(
   "Addons"
 ).add_info(
