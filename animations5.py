@@ -293,9 +293,12 @@ CmdHelp("animations5").add_command(
 ).add_command(
 
   'fdance', None, 'Shitty Yooooo animations. Like who wants it.. duhh'
-
+).add_info(
+  "Comes under Animation For Fun"
+).add_warning(
+  "Harmless Module"
 ).add_type(
-    "Addons"
+  "Addons"
 ).add()
 
 
