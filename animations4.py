@@ -292,8 +292,12 @@ CmdHelp("animation4").add_command(
   "fstyle", "<text>", "Prints the given text in 'F' format"
 ).add_command(
   "wahack", None, "Whatsapp Hack animation"
+).add_info(
+   "Its Come Under For Fun"
+).add_warning(
+   "Harmless Module"
 ).add_type(
-     "Addons"
+   "Addons"
 ).add()
 
 #legendbot
