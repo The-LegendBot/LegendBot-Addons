@@ -414,6 +414,10 @@ CmdHelp("animation1").add_command(
   'gnt', None, 'Cool Good Night Animation'
 ).add_command(
   'muths', None, 'Fapping✊'
+).add_info(
+   "Animation Plugin Comes under for fun"
+).add_warning(
+   "Harmless Module"
 ).add_type(
-   'Addons'
+   "Addons"
 ).add()
