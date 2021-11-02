@@ -163,7 +163,7 @@ async def payf(event):
     )
     await event.edit(pay)
 
-@bot.on(admin_cmd(pattern=f"^uff$", outgoing=True))
+@bot.on(admin_cmd(pattern=f"^Uff$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -237,19 +237,7 @@ async def _(event):
         r == 1
         await event.edit("╭━━━╮\n┃╭━━╯\n┃╰━━╮\n┃╭━━╯\n┃┃\n╰╯")
 
-@bot.on(admin_cmd(pattern=f"f$", outgoing=True))
-async def payf(e):
-    paytext = e.pattern_match.group(1)
-    pay = "{}\n{}\n{}\n{}\n{}\n{}\n{}".format(
-        paytext * 5,
-        paytext * 1,
-        paytext * 1,
-        paytext * 4,
-        paytext * 1,
-        paytext * 1,
-        paytext * 1,
-    )
-    await event.edit(pay)
+
     
 @bot.on(admin_cmd(pattern=f"animate$", outgoing=True))
 @bot.on(sudo_cmd(pattern=f"animate$", allow_sudo=True))
@@ -282,16 +270,6 @@ async def _(event):
     if event.fwd_from:
         return
     deq = deque(list("🤔🧐🤨🤔🧐🤨"))
-    for _ in range(999):
-        await asyncio.sleep(1)
-        await event.edit("".join(deq))
-        deq.rotate(1)
-    
-@borg.on(admin_cmd(pattern=r"^Lol"))
-async def _(event):
-    if event.fwd_from:
-        return
-    deq = deque(list("😂🤣😂🤣😂🤣"))
     for _ in range(999):
         await asyncio.sleep(1)
         await event.edit("".join(deq))
@@ -403,8 +381,6 @@ async def _(event):
     await event.edit("sadmin")
     animation_chars = [
 
-
-
             "@aaaaaaaaaaaaadddddddddddddmmmmmmmmmmmmmiiiiiiiiiiiiinnnnnnnnnnnnn",
 
             "@aaaaaaaaaaaaddddddddddddmmmmmmmmmmmmiiiiiiiiiiiinnnnnnnnnnnn",    
@@ -437,16 +413,12 @@ async def _(event):
             await asyncio.sleep(1)
             await event.edit(animation_chars[i % 13])
 
-
-CmdHelp("shoutadmin").add_command(
-    'sadmin', None, 'υѕє αи∂ ѕєє'
-).add()
 CmdHelp("animations6").add_command(
   'bigoof', None, '🇮🇳🇮🇳🇮🇳'
 ).add_command(
   'g1', None, 'Use and see'
 ).add_command(
-  'uff', None, 'Use and see'
+  '^Uff', None, 'Use and see'
 ).add_command(
   'ctext', None, 'Use and see'
 ).add_command(
@@ -456,13 +428,9 @@ CmdHelp("animations6").add_command(
 ).add_command(
   'kf', None, 'Use and see'
 ).add_command(
-  'f', None, 'Use and see'
-).add_command(
   'muth', None, 'Use And See'
 ).add_command(
   'birthday', None, 'Use And See'
-).add_command(
-  '^Lol', None, 'Use and See'
 ).add_command(
   '^Tlol', None, 'Use and See'
 ).add_command(
