@@ -128,7 +128,7 @@ CmdHelp("animal").add_command(
 ).add_command(
     'spong', None, 'Spong Face'
 ).add_command(
-    '^LegendBot', None, 'Use and See'
+    'LegendBot', None, 'Use and See'
 ).add_info(
     "Its Very Useful Module Its used for showing some animal characters"
 ).add_warning(
