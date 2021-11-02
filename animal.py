@@ -9,7 +9,7 @@ M = (
     "▕╭╮▏╮┈┈┈┈┏━━━╯▏\n"
     "▕╰╯▏╯╰┳┳┳┳┳┳╯╭▏ \n"
     "▕┈╭▏╭╮┃┗┛┗┛┃┈╰▏ \n"
-    "▕┈╰▏╰╯╰━━━━╯┈┈▏ν2.ο\n"
+    "▕┈╰▏╰╯╰━━━━╯┈┈▏\n"
 )
 
 
@@ -77,6 +77,26 @@ H = (
     "┈┈┈┈┈┈┏━┓┈┈┈┈┈┈ν2.ο\n"
 )
 
+L = (
+     "       LegendBot\n"
+     "╭╮╱╱╭━━━┳━━━┳━━━┳━╮╱╭┳━━━╮\n"
+     "┃┃╱╱┃╭━━┫╭━╮┃╭━━┫┃╰╮┃┣╮╭╮┃\n"
+     "┃┃╱╱┃╰━━┫┃╱╰┫╰━━┫╭╮╰╯┃┃┃┃┃\n"
+     "┃┃╱╭┫╭━━┫┃╭━┫╭━━┫┃╰╮┃┃┃┃┃┃\n"
+     "┃╰━╯┃╰━━┫╰┻━┃╰━━┫┃╱┃┃┣╯╰╯┃\n"
+     "╰━━━┻━━━┻━━━┻━━━┻╯╱╰━┻━━━╯\n"
+     " ╱╱╱╱╱╱╭━━╮╭━━━┳━━━━╮\n"
+     " ╱╱╱╱╱╱┃╭╮┃┃╭━╮┃╭╮╭╮┃\n"
+     " ╱╭╮╱╭╮┃╰╯╰┫┃╱┃┣╯┃┃╰╋╮╱╭╮\n"
+     " ╭╯╰┳╯╰┫╭━╮┃┃╱┃┃╱┃┃╭╯╰┳╯╰╮\n"
+     " ╰╮╭┻╮╭┫╰━╯┃╰━╯┃╱┃┃╰╮╭┻╮╭╯\n"
+     " ╱╰╯╱╰╯╰━━━┻━━━╯╱╰╯╱╰╯╱╰╯\n"
+)
+
+@borg.on(admin_cmd(pattern=r"^LegendBot"))
+async def legend(uff):
+    await uff.edit(L)
+
 
 @borg.on(admin_cmd(pattern=r"fox"))
 async def fox(fox):
@@ -98,21 +118,23 @@ async def pig(pig):
     await pig.edit(P)
     
 CmdHelp("animal").add_command(
-'pig', None, 'pig face'
+    'pig', None, 'pig face'
 ).add_command(
-'homer', None, 'Homer Face'
+    'homer', None, 'Homer Face'
 ).add_command(
-'elephant', None, 'Elephant Face'
+    'elephant', None, 'Elephant Face'
 ).add_command(
-'fox', None, 'Fox Face•'
+    'fox', None, 'Fox Face•'
 ).add_command(
-'dog', None, 'Dog Face'
+    'dog', None, 'Dog Face'
 ).add_command(
-'spong', None, 'Spong Face'
+    'spong', None, 'Spong Face'
+).add_command(
+    '^LegendBot', None, 'Use and See'
 ).add_info(
-       "Its Very Useful Module Its used for showing some animal characters"
+    "Its Very Useful Module Its used for showing some animal characters"
 ).add_warning(
-       "Harmless Module✅"
+    "Harmless Module✅"
 ).add_type(
-       "Addons"
+    "Addons"
 ).add()
