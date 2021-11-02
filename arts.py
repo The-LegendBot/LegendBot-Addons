@@ -647,5 +647,11 @@ CmdHelp("arts").add_command(
 ).add_command(
   'china', '<text>', 'Send your text in china art'
 ).add_command(
-  'sshit', None, 'Send a art in "Ahh shit. Here we go again"'
+  'sshit', None, 'Send a art in Ahh shit. Here we go again'
+).add_info(
+  "This Is For Fun Purposes"
+).add_warning(
+  "Harmless Module✅"
+).add_type(
+  "Addons"
 ).add()
