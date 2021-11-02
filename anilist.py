@@ -1,4 +1,3 @@
-
 import json
 import re
 
@@ -88,10 +87,9 @@ async def anilist(event):
 CmdHelp("anilist").add_command(
   'anilist', '<anime name>', 'Shows you the details of the anime'
 ).add_info(
-       "Its Very Useful Module Its shows the profile and all the details of the characters of the animation"
+  "Its Very Useful Module Its shows the profile and all the details of the characters of the animation"
 ).add_warning(
-       "Harmless Module✅"
+  "Harmless Module✅"
 ).add_type(
-       "Addons"
+  "Addons"
 ).add()
-
