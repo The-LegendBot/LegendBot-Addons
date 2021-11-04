@@ -1420,4 +1420,12 @@ CmdHelp("diwali").add_command(
         'hdd', None, 'µรε αɳ∂ รεε'
 ).add_command(
         'diwali', None, 'մsɾ αղժ sҽҽ'
+).add_command(
+        'wishdiwali', None, 'Use and See'
+).add_info(
+    "Used To Wish Friend Of Diwali"
+).add_type(
+    "Addons"
+).add_warning(
+    "Harmless Module"
 ).add()
