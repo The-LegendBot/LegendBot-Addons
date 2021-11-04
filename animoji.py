@@ -7,8 +7,8 @@ from userbot.cmdhelp import CmdHelp
 
 from .import *
 
-@bot.on(admin_cmd(pattern="thinking$", outgoing=True))
-@bot.on(sudo_cmd(pattern="thinking$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="think$", outgoing=True))
+@bot.on(sudo_cmd(pattern="think$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -402,8 +402,8 @@ async def _(event):
         await event.edit(animation_chars[i % 12])
 
 
-@bot.on(admin_cmd(pattern=r"theheart$", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"theheart$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"theart$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"theart$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -436,7 +436,7 @@ async def _(event):
 
 
 CmdHelp("animoji").add_command(
-  'thinking', None, 'Use and see'
+  'think', None, 'Use and see'
 ).add_command(
   'lmao', None, 'Use and see'
 ).add_command(
@@ -446,7 +446,7 @@ CmdHelp("animoji").add_command(
 ).add_command(
   'muah', None, 'Use and see'
 ).add_command(
-  'theheart', None, 'Use and see'
+  'heart', None, 'Use and see'
 ).add_command(
   'gym', None, 'Use and see'
 ).add_command(
@@ -483,10 +483,4 @@ CmdHelp("animoji").add_command(
   'fuck', None, 'Tapa tap tapa tap'
 ).add_command(
   'lovestory', None, 'A true love story😃'
-).add_info(
-  "Its All Emoji Plugin Animation"
-).add_warning(
-  "Harmless Module✅"
-).add_type(
-  "Addons"
 ).add()

@@ -60,6 +60,55 @@ async def _(event):
     await event.delete()
 
 
+@bot.on(admin_cmd(pattern="thinking$"))
+@bot.on(sudo_cmd(pattern="thinking$", allow_sudo=True))
+async def _(event):
+    if event.fwd_from:
+        return
+    animation_interval = 0.01
+    animation_ttl = range(288)
+    event = await edit_or_reply(event, "thinking..")
+    animation_chars = [
+        "THINKING",
+        "THI&K#N₹",
+        "T+IN@I?G",
+        "¿H$NK∆NG",
+        "¶H×NK&N*",
+        "NGITHKIN",
+        "T+I#K@₹G",
+        "THINKING",
+        "THI&K#N₹",
+        "T+IN@I?G",
+        "¿H$NK∆NG",
+        "¶H×NK&N*",
+        "NGITHKIN",
+        "T+I#K@₹G",
+        "THINKING",
+        "THI&K#N₹",
+        "T+IN@I?G",
+        "¿H$NK∆NG",
+        "¶H×NK&N*",
+        "NGITHKIN",
+        "T+I#K@₹G",
+        "THINKING",
+        "THI&K#N₹",
+        "T+IN@I?G",
+        "¿H$NK∆NG",
+        "¶H×NK&N*",
+        "NGITHKIN",
+        "T+I#K@₹G",
+        "THINKING",
+        "THI&K#N₹",
+        "T+IN@I?G",
+        "¿H$NK∆NG",
+        "¶H×NK&N*",
+        "NGITHKIN",
+        "T+I#K@₹G",
+        "THINKING... 🤔",
+    ]
+    for i in animation_ttl:
+        await asyncio.sleep(animation_interval)
+        await event.edit(animation_chars[i % 36])
 
 
 @bot.on(admin_cmd(pattern=f"snake$", outgoing=True))
@@ -268,6 +317,49 @@ async def _(event):
         await event.edit(animation_chars[i % 30])
 
         
+@bot.on(admin_cmd(pattern=r"wow$", outgoing=True))
+
+@bot.on(sudo_cmd(pattern="wow$", allow_sudo=True))
+
+async def _(event):
+
+    if event.fwd_from:
+
+        return
+
+    animation_interval = 1
+
+    animation_ttl = range(30)
+
+    event = await edit_or_reply(event, "wow")
+
+    animation_chars = [
+
+        "**💗💗                     💗💗**",
+        "**💗💗                     💗💗**",
+        "**💗💗                     💗💗**",
+        "**💗💗                     💗💗**",
+        "**💗💗         💗          💗💗**",
+        "**💗💗       💗💗        💗💗**",
+        "**💗💗      💗💗💗      💗💗**",
+        "**💗💗   💗💗  💗💗   💗💗**",
+        "**💗💗💗💗      💗💗💗💗**",
+        "**💗💗💗        💗💗💗**",
+
+        "**💖💖💖💖💖**",
+        "**💖💖💖💖💖💖💖**",
+        "**💖💖          💖💖**",
+        "**💖💖              💖💖**",
+        "**💖💖                 💖💖**",
+        "**💖💖                💖💖**",
+        "**💖💖              💖💖**",
+        "**💗   **",
+    ]           
+    for i in animation_ttl:
+
+        await asyncio.sleep(animation_interval)
+
+        await event.edit(animation_chars[i % 30])
 
 @bot.on(admin_cmd(pattern=f"nikal$", outgoing=True))
 @bot.on(sudo_cmd(pattern="nikal$", allow_sudo=True))
@@ -371,6 +463,8 @@ CmdHelp("animations3").add_command(
 ).add_command(
   'eye', None, 'Use and see'
 ).add_command(
+  'thinking', None, 'Use and see'
+).add_command(
   'snake', None, 'Use and see'
 ).add_command(
   'human', None, 'Use and see'
@@ -386,10 +480,6 @@ CmdHelp("animations3").add_command(
   'music', None, 'Use and see'
 ).add_command(
   'squ', None, 'Use and see'
-).add_info(
-  "This Plugins Come Under For Fun"
-).add_warning(
-  "Harmless Module✅"
 ).add_type(
   "Addons"
 ).add()

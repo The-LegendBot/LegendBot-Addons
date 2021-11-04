@@ -160,6 +160,4 @@ CmdHelp("anime").add_command(
   "Anime Search"
 ).add_warning(
   "✅ Harmless Module."
-).add_type(
-  "Addons"
 ).add()

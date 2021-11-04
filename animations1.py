@@ -357,8 +357,8 @@ async def _(event):
         await event.edit(animation_chars[i % 40])
 
 
-@bot.on(admin_cmd(pattern=f"charge$"))
-@bot.on(sudo_cmd(pattern=f"charge$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"charging$"))
+@bot.on(sudo_cmd(pattern=f"charging$", allow_sudo=True))
 async def timer_blankx(e):
     if e.fwd_from:
         return
@@ -403,7 +403,7 @@ CmdHelp("animation1").add_command(
 ).add_command(
   'bigoof', None, 'Big off animation'
 ).add_command(
-  'charge', None, 'Use and see'
+  'charging', None, 'Use and see'
 ).add_command(
   'yo', None, 'Shitty Yooooo animations. Like who wants it.. duhh'
 ).add_command(
@@ -414,10 +414,6 @@ CmdHelp("animation1").add_command(
   'gnt', None, 'Cool Good Night Animation'
 ).add_command(
   'muths', None, 'Fapping✊'
-).add_info(
-   "Animation Plugin Comes under for fun"
-).add_warning(
-   "Harmless Module"
 ).add_type(
-   "Addons"
+   'Addons'
 ).add()

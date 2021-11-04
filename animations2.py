@@ -243,38 +243,27 @@ async def _(event):
         return
     animation_interval = 0.3
     animation_ttl = range(15)
-    if event.reply_to_msg_id:
-        reply_message = await event.get_reply_message()
-        replied_user = await event.client(GetFullUserRequest(reply_message.sender_id))
-        replied_user.user.first_name
-        replied_user.user.username
-        idd = reply_message.sender_id
-        if idd == 2082798662:
-            await event.edit(
-                "This is My Master\n**How dare you trying to Give Fake Hack Command**\n\n__Your account is on hold! Pay 99$ to my master__ [The_LegendBoy](https://t.me/The_LegendBoy) __to release your account__😏"
-            )
-        else:
-            await event.edit("`Hacking this kid....`")
-            animation_chars = [
-                "Looking for WhatsApp databases in targeted person...",
-                " User online: True\nTelegram access: True\nRead Storage: True ",
-                "Hacking... 0%\n[░░░░░░░░░░░░░░░░░░░░]\n`Looking for WhatsApp...`\nETA: 0m, 20s",
-                "Hacking... 11.07%\n[██░░░░░░░░░░░░░░░░░░]\n`Looking for WhatsApp...`\nETA: 0m, 18s",
-                "Hacking... 20.63%\n[███░░░░░░░░░░░░░░░░░]\n`Found folder C:/WhatsApp`\nETA: 0m, 16s",
-                "Hacking... 34.42%\n[█████░░░░░░░░░░░░░░░]\n`Found folder C:/WhatsApp`\nETA: 0m, 14s",
-                "Hacking... 42.17%\n[███████░░░░░░░░░░░░░]\n`Searching for databases`\nETA: 0m, 12s",
-                "Hacking... 55.30%\n[█████████░░░░░░░░░░░]\n`Found msgstore.db.crypt12`\nETA: 0m, 10s",
-                "Hacking... 64.86%\n[███████████░░░░░░░░░]\n`Found msgstore.db.crypt12`\nETA: 0m, 08s",
-                "Hacking... 74.02%\n[█████████████░░░░░░░]\n`Trying to Decrypt...`\nETA: 0m, 06s",
-                "Hacking... 86.21%\n[███████████████░░░░░]\n`Trying to Decrypt...`\nETA: 0m, 04s",
-                "Hacking... 93.50%\n[█████████████████░░░]\n`Decryption successful!`\nETA: 0m, 02s",
-                "Hacking... 100%\n[████████████████████]\n`Scanning file...`\nETA: 0m, 00s",
-                "Hacking complete!\nUploading file...",
-                "Targeted Account Hacked...!\n\n ✅ File has been successfully uploaded to my server.\nWhatsApp Database:\n`./DOWNLOADS/msgstore.db.crypt12`",
-                ]
-            for i in animation_ttl:
-                await asyncio.sleep(animation_interval)
-                await event.edit(animation_chars[i % 15])
+    event = await edit_or_reply(event, "`Hacking this kid....`")
+    animation_chars = [
+            "Looking for WhatsApp databases in targeted person...",
+            " User online: True\nTelegram access: True\nRead Storage: True ",
+            "Hacking... 0%\n[░░░░░░░░░░░░░░░░░░░░]\n`Looking for WhatsApp...`\nETA: 0m, 20s",
+            "Hacking... 11.07%\n[██░░░░░░░░░░░░░░░░░░]\n`Looking for WhatsApp...`\nETA: 0m, 18s",
+            "Hacking... 20.63%\n[███░░░░░░░░░░░░░░░░░]\n`Found folder C:/WhatsApp`\nETA: 0m, 16s",
+            "Hacking... 34.42%\n[█████░░░░░░░░░░░░░░░]\n`Found folder C:/WhatsApp`\nETA: 0m, 14s",
+            "Hacking... 42.17%\n[███████░░░░░░░░░░░░░]\n`Searching for databases`\nETA: 0m, 12s",
+            "Hacking... 55.30%\n[█████████░░░░░░░░░░░]\n`Found msgstore.db.crypt12`\nETA: 0m, 10s",
+            "Hacking... 64.86%\n[███████████░░░░░░░░░]\n`Found msgstore.db.crypt12`\nETA: 0m, 08s",
+            "Hacking... 74.02%\n[█████████████░░░░░░░]\n`Trying to Decrypt...`\nETA: 0m, 06s",
+            "Hacking... 86.21%\n[███████████████░░░░░]\n`Trying to Decrypt...`\nETA: 0m, 04s",
+            "Hacking... 93.50%\n[█████████████████░░░]\n`Decryption successful!`\nETA: 0m, 02s",
+            "Hacking... 100%\n[████████████████████]\n`Scanning file...`\nETA: 0m, 00s",
+            "Hacking complete!\nUploading file...",
+            "Targeted Account Hacked...!\n\n ✅ File has been successfully uploaded to my server.\nWhatsApp Database:\n`./DOWNLOADS/msgstore.db.crypt12`",
+    ]
+    for i in animation_ttl:
+        await asyncio.sleep(animation_interval)
+        await event.edit(animation_chars[i % 15])
 
 @bot.on(admin_cmd(pattern=r"jio$", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"jio$", allow_sudo=True))
@@ -403,20 +392,11 @@ async def _(event):
     animation_interval = 1
 
     animation_ttl = range(0, 20)
-    
-    if event.reply_to_msg_id:
-        reply_message = await event.get_reply_message()
-        replied_user = await event.client(GetFullUserRequest(reply_message.sender_id))
-        replied_user.user.first_name
-        replied_user.user.username
-        idd = reply_message.sender_id
-        if idd == 2082798662:
-            await event.edit(
-                "This is My Master\n**How dare you try to give my master to fake promote*\n\n__Your account is on hold! Pay 99$ to my master__ [The_LegendBoy](https://t.me/The_LegendBoy) __to release your account__😏"
-            )
-        else:
-            await event.edit("promoting.......")
-            animation_chars = [
+
+    await event.edit("promoting.......")
+
+    animation_chars = [
+        
             "**Promoting User As Admin...**",
             "**Enabling All Permissions To User...**",
             "**(1) Send Messages: ☑️**",
@@ -437,10 +417,14 @@ async def _(event):
             "**(8) Change Chat Info: ✅**",
             "**Permission Granted Successfully**",
             f"**pRoMooTeD SuCcEsSfUlLy bY: {DEFAULTUSER}**"
-            ]
-            for i in animation_ttl:
-                await asyncio.sleep(animation_interval)
-                await event.edit(animation_chars[i % 20])
+
+ ]
+
+    for i in animation_ttl:
+
+            await asyncio.sleep(animation_interval)
+
+            await event.edit(animation_chars[i % 20])
 
        
 CmdHelp("animation2").add_command(
@@ -468,15 +452,11 @@ CmdHelp("animation2").add_command(
 ).add_command(
   'nehi', None, 'Use and see'
 ).add_command(
-  'hack', '<Reply To A User>', 'Im a hacker bitch'
+  'hack', None, 'Im a hacker bitch'
 ).add_command(
   'hnd', '<your text>', 'A handy animation with the text,'
 ).add_command(
-  'padmin', '<Reply To User>', 'Prank promote a user'
-).add_info(
-  "Its Just Animation use for Fun"
-).add_warning(
-  "Harmless Module✅"
+  'padmin', None, 'Prank promote a user'
 ).add_type(
-  "Addons"
+  'Addons'
 ).add()

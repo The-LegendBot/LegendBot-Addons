@@ -3,11 +3,10 @@ import asyncio
 from telethon.tl.functions.users import GetFullUserRequest
 
 from userbot import *
-from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LegendBoy"
-
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ν2.ο"
 @bot.on(admin_cmd(pattern="think$"))
 @bot.on(sudo_cmd(pattern="think$", allow_sudo=True))
 async def _(event):
@@ -175,8 +174,8 @@ async def _(event):
         await event.edit(animation_chars[i % 28])
 
 
-@bot.on(admin_cmd(pattern="virus$"))
-@bot.on(sudo_cmd(pattern="virus$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="viruses$"))
+@bot.on(sudo_cmd(pattern="viruses$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -220,8 +219,8 @@ async def _(event):
         await event.edit(animation_chars[i % 30])
 
 
-@bot.on(admin_cmd(pattern=f"raped$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"raped$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"raping$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"raping$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -909,9 +908,9 @@ CmdHelp("animation").add_command(
 ).add_command(
   'mcs', None, 'Use and see'
 ).add_command(
-  'virus', None, 'Use and see'
+  'viruses', None, 'Use and see'
 ).add_command(
-  'raped', None, 'Use and see'
+  'raping', None, 'Use and see'
 ).add_command(
   'nikl', None, 'Use and see'
 ).add_command(
@@ -967,11 +966,11 @@ CmdHelp("animation").add_command(
 ).add_command(
   'oss', None, 'Use And See'
 ).add_type(
-  "Addons"
+  "Official"
 ).add_info(
-  "Its Very Useful Module too much just use these u must(might) have fun"
+       "Its Very Useful Module too much just use these u must(might) have fun"
 ).add_warning(
-  "Harmless Module✅"
+       "Harmless Module✅"
 ).add_type(
-  "Addons"
+       "Addons"
 ).add()
